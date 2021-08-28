@@ -23,7 +23,6 @@ import sliceAppLarge from 'assets/slice-app-large.jpg';
 import sliceAppPlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceSidebarLayers from 'assets/slice-sidebar-layers.png';
 import sliceSidebarLayersLarge from 'assets/slice-sidebar-layers-large.png';
-import sliceSidebarLayersPlaceholder from 'assets/slice-sidebar-layers-placeholder.png';
 import sliceSidebarAnnotations from 'assets/slice-sidebar-annotations.png';
 import sliceSidebarAnnotationsLarge from 'assets/slice-sidebar-annotations-large.png';
 import sliceSidebarAnnotationsPlaceholder from 'assets/slice-sidebar-annotations-placeholder.png';
@@ -95,15 +94,15 @@ const ProjectSlice = () => {
             <div className="slice__sidebar-images">
               <Image
                 className="slice__sidebar-image"
-                srcSet={`${sliceSidebarLayers} 300w, ${sliceSidebarLayersLarge} 700w`}
-                placeholder={sliceSidebarLayersPlaceholder}
+                srcSet={`${"https://picsum.photos/1000/1000"} 300w, ${"https://picsum.photos/1000/1000"} 700w`}
+                placeholder={"https://picsum.photos/1000/1000"}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <Image
                 className="slice__sidebar-image"
-                srcSet={`${sliceSidebarAnnotations} 300w, ${sliceSidebarAnnotationsLarge} 700w`}
-                placeholder={sliceSidebarAnnotationsPlaceholder}
+                srcSet={`${"https://picsum.photos/1000/1000"} 300w, ${"https://picsum.photos/1000/1000"} 700w`}
+                placeholder={"https://picsum.photos/1000/1000"}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -124,8 +123,8 @@ const ProjectSlice = () => {
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
-              srcSet={`${sliceSlides} 800w, ${sliceSlidesLarge} 1440w`}
-              placeholder={sliceSlidesPlaceholder}
+              srcSet={`${"https://picsum.photos/1000/1000"} 800w, ${"https://picsum.photos/1000/1000"} 1440w`}
+              placeholder={"https://picsum.photos/1000/1000"}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -136,8 +135,8 @@ const ProjectSlice = () => {
             <div className="slice__grid-image">
               <div className="slice__grid-background">
                 <Image
-                  srcSet={`${sliceBackgroundBar} 400w, ${sliceBackgroundBarLarge} 898w`}
-                  placeholder={sliceBackgroundBarPlaceholder}
+                  srcSet={`${"https://picsum.photos/1000/1000"} 400w, ${"https://picsum.photos/1000/1000"} 898w`}
+                  placeholder={"https://picsum.photos/1000/1000"}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -145,8 +144,8 @@ const ProjectSlice = () => {
               </div>
               <div className="slice__grid-foreground">
                 <Image
-                  srcSet={`${sliceAnnotation} 440w, ${sliceAnnotationLarge} 880w`}
-                  placeholder={sliceAnnotationPlaceholder}
+                  srcSet={`${"https://picsum.photos/1000/1000"} 440w, ${"https://picsum.photos/1000/1000"} 880w`}
+                  placeholder={"https://picsum.photos/1000/1000"}
                   alt="An annotation preview popover with statistics for shape perimeter and area."
                   sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
                 />

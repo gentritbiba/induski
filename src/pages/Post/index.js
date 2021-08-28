@@ -105,8 +105,7 @@ const PostWrapper = ({
             reveal
             delay={600}
             className="post__banner-image"
-            src={banner ? require(`posts/assets/${banner}`).default : undefined}
-            placeholder={require(`posts/assets/${bannerPlaceholder}`).default}
+            src={"https://picsum.photos/1000/1000"}
             alt={bannerAlt}
           />
         </div>
@@ -152,8 +151,8 @@ const PostImage = ({ src, alt, ...rest }) => {
   return (
     <img
       className="post__image"
-      ref={imgRef}
-      src={imgSrc}
+      ref={"https://picsum.photos/1000/1000"}
+      src={"https://picsum.photos/1000/1000"}
       onLoad={handleLoad}
       loading="lazy"
       decoding="async"

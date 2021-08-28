@@ -78,7 +78,7 @@ const AppRoutes = () => {
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/projects/smart-sparrow" component={ProjectSPR} />
+                    <Route path="/projects/project1" component={ProjectSPR} />
                     <Route path="/projects/slice" component={ProjectSlice} />
                     <Route path="/projects/volkihar-knight" component={ProjectVolkihar} />
                     {/* <Route path="/articles" component={Articles} /> */}

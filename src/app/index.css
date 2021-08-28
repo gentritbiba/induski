@@ -72,29 +72,122 @@ canvas.displacement-sphere {
   transition-delay: var(--durationXS);
   opacity: 1;
 }
+.slider-custom-image img {
+  border-radius: 20px !important;
+  width: auto;
+  max-width: min(1000px, 100%);
 
-.skip-to-main {
-  color: rgb(var(--rgbBackground));
-  z-index: 128;
-
-  &:focus {
-    padding: var(--spaceS) var(--spaceM);
-    position: fixed;
-    top: var(--spaceM);
-    left: var(--spaceM);
-    text-decoration: none;
-    font-weight: var(--fontWeightMedium);
-    line-height: 1;
-    box-shadow: 0 0 0 4px rgb(var(--rgbBackground)), 0 0 0 8px rgb(var(--rgbText));
-    outline: none;
+  max-height: 600px;
+  object-fit: contain;
+}
+.swiper-slide h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+.swiper-slide {
+  margin-bottom: 100px;
+}
+body .swiper-pagination-bullet {
+  background: wheat;
+}
+.swiper-slide p {
+  font-size: 18px;
+}
+.d-flex-center {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.slider-custom-image > div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-50 {
+  width: 48%;
+  margin: 1%;
+}
+@media (max-width: 1000px) {
+  .w-50 {
+    width: 100%;
   }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgb(var(--rgbPrimary));
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
-    z-index: -1;
+.app {
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: var(--rgbPrimary);
+  overflow: hidden;
+}
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 151, 52) 75%,
+    rgb(255, 151, 52) 100%
+  );
+  -webkit-animation: drop 7s 0s infinite;
+  animation: drop 7s 0s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line:nth-child(1)::after {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line:nth-child(3)::after {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
   }
 }

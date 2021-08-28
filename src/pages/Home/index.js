@@ -14,7 +14,7 @@ import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg'
 import gamestackTexture from 'assets/gamestack-login.jpg';
 import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-
+import Image from 'components/Image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import gamestackTexture2 from 'assets/gamestack-list.jpg';
@@ -25,9 +25,15 @@ import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
-
+import "swiper/swiper-bundle.css";
+// import Swiper core and required modules
+import SwiperCore, {
+  Pagination
+} from 'swiper';
 const disciplines = ['Strategy/Advisory', 'Content', 'Design', 'Community Expansion', 'Social Media', "Partnerships", "Press Release", "Community Management"];
 
+// install Swiper modules
+SwiperCore.use([Pagination]);
 const Home = () => {
   const { status } = useRouteTransition();
   const { hash, state } = useLocation();
@@ -141,6 +147,13 @@ const Home = () => {
 
   return (
     <div className="home">
+
+
+      <div className={"lines"}>
+        <div className={"line"}></div>
+        <div className={"line"}></div>
+        <div className={"line"}></div>
+      </div>
       <Helmet>
         <title>Social Staircase | Marketing Company</title>
         <meta
@@ -165,10 +178,10 @@ const Home = () => {
         title="Lorem Ipsum Dolor Sit Amet."
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cum sequi laudantium voluptates quae enim dolorem illo magni est provident."
         buttonText="Click Me"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/project1"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Project One lesson builder',
           textures: [
             {
               src: "https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1591&q=80",
@@ -184,10 +197,10 @@ const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Lorem ipsum dolor sit amet adipisicing."
+        description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, fugit!"
         buttonText="View Website"
-        buttonLink="https://gamestackapp.com"
+        buttonLink="#s"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -229,19 +242,56 @@ const Home = () => {
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
+        pagination={true}
         style={{ textAlign: "center" }}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide><Profile
-          sectionRef={details}
-          visible={visibleSections.includes(details.current)}
-          id="details"
-        /></SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        ...
+        <SwiperSlide>
+          <div className="d-flex-center">
+            <div className="w-50">
+              <h1>Slide 1</h1>
+              <Image className="slider-custom-image" src="https://picsum.photos/1000/1000" />
+            </div>
+            <div className="w-50">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sed sunt qui magni! Nisi quasi ipsa animi, alias earum voluptatibus in impedit quia, omnis sint quod rem repellat, nesciunt eius aspernatur placeat eum aperiam ullam! Qui at distinctio nostrum reiciendis alias tenetur quo dignissimos nam repellat optio nobis labore perferendis omnis, dicta fugiat commodi ratione quia tempora eveniet eius odio voluptatum quaerat. Hic at deserunt nam nemo, nulla magnam dolore.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="d-flex-center">
+            <div className="w-50">
+              <h1>Slide 2</h1>
+              <Image className="slider-custom-image" src="https://picsum.photos/999/999" />
+            </div>
+            <div className="w-50">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sed sunt qui magni! Nisi quasi ipsa animi, alias earum voluptatibus in impedit quia, omnis sint quod rem repellat, nesciunt eius aspernatur placeat eum aperiam ullam! Qui at distinctio nostrum reiciendis alias tenetur quo dignissimos nam repellat optio nobis labore perferendis omnis, dicta fugiat commodi ratione quia tempora eveniet eius odio voluptatum quaerat. Hic at deserunt nam nemo, nulla magnam dolore.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="d-flex-center">
+            <div className="w-50">
+              <h1>Slide 3</h1>
+              <Image className="slider-custom-image" src="https://picsum.photos/1000/999" />
+            </div>
+            <div className="w-50">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sed sunt qui magni! Nisi quasi ipsa animi, alias earum voluptatibus in impedit quia, omnis sint quod rem repellat, nesciunt eius aspernatur placeat eum aperiam ullam! Qui at distinctio nostrum reiciendis alias tenetur quo dignissimos nam repellat optio nobis labore perferendis omnis, dicta fugiat commodi ratione quia tempora eveniet eius odio voluptatum quaerat. Hic at deserunt nam nemo, nulla magnam dolore.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="d-flex-center">
+            <div className="w-50">
+              <h1>Slide 4</h1>
+              <Image className="slider-custom-image" src="https://picsum.photos/999/1000" />
+            </div>
+            <div className="w-50">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sed sunt qui magni! Nisi quasi ipsa animi, alias earum voluptatibus in impedit quia, omnis sint quod rem repellat, nesciunt eius aspernatur placeat eum aperiam ullam! Qui at distinctio nostrum reiciendis alias tenetur quo dignissimos nam repellat optio nobis labore perferendis omnis, dicta fugiat commodi ratione quia tempora eveniet eius odio voluptatum quaerat. Hic at deserunt nam nemo, nulla magnam dolore.</p>
+            </div>
+          </div>
+        </SwiperSlide>
+
       </Swiper>
       <Profile
         sectionRef={details}

@@ -37,7 +37,7 @@
     "react-router-dom": "5.2.0",
     "react-slick": "^0.28.1",
     "react-transition-group": "^4.4.1",
-    "swiper": "^6.8.3",
+    "swiper": "^6.8.4",
     "three": "^0.129.0"
   },
   "scripts": {
