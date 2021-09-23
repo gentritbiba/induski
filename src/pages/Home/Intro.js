@@ -76,7 +76,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                 <DecoderText text="Social Staircase" start={!prerender} delay={300} />
               </h1>
               <Heading level={0} as="h2" className="intro__title">
-                <VisuallyHidden className="intro__title-label">{`Marketing + ${introLabel}`}</VisuallyHidden>
+                <VisuallyHidden className="intro__title-label">{`Software Development + ${introLabel}`}</VisuallyHidden>
                 <span
                   aria-hidden
                   className={classNames('intro__title-row', {
@@ -90,7 +90,7 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                     )}
                     style={{ '--delay': tokens.base.durationXS, fontSize: "calc((140 / 16) * .5rem) !important" }}
                   >
-                    Marketing
+                    Software Development
                   </span>
                   <span
                     className={classNames(

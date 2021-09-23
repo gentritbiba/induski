@@ -9,7 +9,7 @@ import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
+import softDevImg from 'assets/gui-2311261.png';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
 import gamestackTexture from 'assets/gamestack-login.jpg';
 import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
@@ -30,7 +30,7 @@ import "swiper/swiper-bundle.css";
 import SwiperCore, {
   Pagination
 } from 'swiper';
-const disciplines = ['Strategy/Advisory', 'Content', 'Design', 'Community Expansion', 'Social Media', "Partnerships", "Press Release", "Community Management"];
+const disciplines = ['Web Development', 'Mobile Development', 'UI/UX', 'SEO', 'Digital Marketing'];
 
 // install Swiper modules
 SwiperCore.use([Pagination]);
@@ -175,8 +175,8 @@ const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Lorem Ipsum Dolor Sit Amet."
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cum sequi laudantium voluptates quae enim dolorem illo magni est provident."
+        title="Software Development"
+        description="If you need to build a whole new process, it takes the right planning and process to get things right. Avoid overcomplicated solutions, wasted budget, and a delayed timescale by getting us involved early. We’ll help you plan, build, and ultimately deliver the perfect solution."
         buttonText="Click Me"
         buttonLink="/projects/project1"
         model={{
@@ -184,8 +184,8 @@ const Home = () => {
           alt: 'Project One lesson builder',
           textures: [
             {
-              src: "https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1591&q=80",
-              srcSet: `${"https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1591&q=80"} 800w, ${"https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1591&q=80"} 1440w`,
+              src: softDevImg,
+              srcSet: `${softDevImg} 800w, ${softDevImg} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -197,10 +197,10 @@ const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Lorem ipsum dolor sit amet adipisicing."
-        description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, fugit!"
+        title="Mobile Development"
+        description="With more people being addicted to smartphones and integrating it to almost everything in their life, communicating and paying bills, etc., it is a golden time for businesses to jump to the next level with a mobile application."
         buttonText="View Website"
-        buttonLink="#s"
+        buttonLink="/projects/project1"
         model={{
           type: 'phone',
           alt: 'App login screen',

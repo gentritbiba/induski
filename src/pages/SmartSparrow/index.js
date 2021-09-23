@@ -67,14 +67,14 @@ import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
 import Earth, { EarthSection } from './Earth';
 import './index.css';
 
-const title = 'Sample title here';
+const title = 'Software Development';
 const description =
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis atque ipsum repellat.';
+  'If you need to build a whole new process, it takes the right planning and process to get things right. Avoid overcomplicated solutions, wasted budget, and a delayed timescale by getting us involved early. We’ll help you plan, build, and ultimately deliver the perfect solution.';
 const roles = [
-  'Attribute #1',
-  'Attribute #2',
-  'Attribute #3',
-  'Attribute #4',
+  'Fast',
+  'Efficient',
+  'Professional',
+  'Reliable',
 ];
 
 const ProjectSPR = () => {
@@ -108,7 +108,6 @@ const ProjectSPR = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="#"
           roles={roles}
         />
         <ProjectSection first>
@@ -131,15 +130,9 @@ const ProjectSPR = () => {
         </ProjectSection>
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>New Frontier</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Project One began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              Embarking on a new software project is a big deal for any business. You have an idea or requirement which needs fulfillment with software and need someone to make your vision a reality. Hiring a software development company is how you do it, and we are a leading software developer in Kosovo.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -168,44 +161,16 @@ const ProjectSPR = () => {
               </SegmentedControl>
             </ProjectTextRow>
             <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
+              <ProjectSectionHeading>Newest Technology</ProjectSectionHeading>
               <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
+
+                Every business will have different software requirements, so every solution will be different. From the start, our focus is on getting to know your business and your people, so we understand what you want to achieve.
+                Any software we build is unique and customized to fit your specific requirements. Using our skills in cutting-edge cloud technology, we will build sleek, modern, scalable applications that do exactly what you need them to do.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <Image
-              raised
-              key={themeId}
-              srcSet={`${isDark ? imageSprDesignSystemDark : imageSprDesignSystemLight
-                } 1280w, ${isDark ? imageSprDesignSystemDarkLarge : imageSprDesignSystemLightLarge
-                } 2560w`}
-              placeholder={
-                isDark
-                  ? imageSprDesignSystemDarkPlaceholder
-                  : imageSprDesignSystemLightPlaceholder
-              }
-              alt="The homepage of the aero design system docs website linking to principles and components."
-              sizes="100vw"
-            />
-            <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
-              <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
+
         <ThemeProvider themeId="dark">
           <ProjectSection
             ref={motionSectionRef}
@@ -222,12 +187,9 @@ const ProjectSPR = () => {
             <ProjectSectionColumns width="full">
               <ProjectSectionContent width="full">
                 <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
+                  <ProjectSectionHeading>Flexible</ProjectSectionHeading>
                   <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
+                    Our experienced team of developers have built application software for a variety of industries including transport logistics, education, infrastructure, fintech and law.
                   </ProjectSectionText>
                 </ProjectTextRow>
               </ProjectSectionContent>
@@ -243,78 +205,146 @@ const ProjectSPR = () => {
             </ProjectSectionColumns>
           </ProjectSection>
         </ThemeProvider>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
-              <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              raised
-              key={themeId}
-              srcSet={`${isDark ? imageSprStoryboarderDark : imageSprStoryboarderLight
-                } 1280w, ${isDark ? imageSprStoryboarderDarkLarge : imageSprStoryboarderLightLarge
-                } 2560w`}
-              placeholder={
-                isDark
-                  ? imageSprStoryboarderDarkPlaceholder
-                  : imageSprStoryboarderLightPlaceholder
-              }
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+
+        <ThemeProvider themeId="dark">
+          <Earth
+            className="spr__earth"
+            hideMeshes={useMemo(
+              () => ['Atmosphere', 'EarthPartial', 'Chunk', 'EarthFull'],
+              []
+            )}
+            position={useMemo(() => [0, 0, 0], [])}
+            ref={earthSectionRef}
+            labels={useMemo(
+              () => [
+                {
+                  position: [0.54, 0.19, 0.18],
+                  text: 'Pacific ring of fire',
+                  hidden: true,
+                },
+                {
+                  position: [0.47, -0.38, 0.04],
+                  text: 'Ruapehu',
+                  hidden: true,
+                },
+                {
+                  position: [0.22, 0.44, -0.35],
+                  text: 'St. Helens',
+                  hidden: true,
+                },
+                {
+                  position: [0.16, -0.06, 0.58],
+                  text: 'Krakatoa',
+                  hidden: true,
+                },
+                {
+                  position: [0.11, 0.2, -0.56],
+                  text: 'Parícutin',
+                  hidden: true,
+                },
+                {
+                  position: [0.52, 0.2, -0.23],
+                  text: 'Kīlauea',
+                  hidden: true,
+                },
+                {
+                  position: [-0.24, 0.75, 0.24],
+                  text: 'Mantle',
+                  delay: 800,
+                  hidden: true,
+                },
+                {
+                  position: [-0.24, 0.55, 0.24],
+                  text: 'Outer core',
+                  delay: 800,
+                  hidden: true,
+                },
+                {
+                  position: [-0.24, 0.35, 0.24],
+                  text: 'Inner core',
+                  delay: 800,
+                  hidden: true,
+                },
+              ],
+              []
+            )}
+            scale={0.6}
+          >
+            <EarthSection
+              scrim
+              animations={['0:loop']}
+              camera={[0, 0, 1.5]}
+              meshes={['Atmosphere', 'EarthFull']}
+            >
+              <ProjectSection>
+                <ProjectSectionContent>
+                  <ProjectTextRow center>
+                    <ProjectSectionHeading>
+                      The limit is your imagination
+                    </ProjectSectionHeading>
+                    <ProjectSectionText>
+
+                    </ProjectSectionText>
+                  </ProjectTextRow>
+                </ProjectSectionContent>
+              </ProjectSection>
+            </EarthSection>
+            <EarthSection
+              animations={['0:loop']}
+              camera={[0, 0, 2.4]}
+              meshes={['Atmosphere', 'EarthFull']}
             />
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionColumns>
-            <ProjectSectionContent>
-              <ProjectTextRow>
-                <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
-                </ProjectSectionHeading>
-                <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
-                </ProjectSectionText>
-              </ProjectTextRow>
-            </ProjectSectionContent>
-            <div className="spr__sidebar-images">
-              <Image
-                className="spr__sidebar-image"
-                srcSet={`${isDark ? imageSprSchema2Dark : imageSprSchema2Light} 260w, ${isDark ? imageSprSchema2DarkLarge : imageSprSchema2LightLarge
-                  } 520w`}
-                placeholder={
-                  isDark
-                    ? imageSprSchema2DarkPlaceholder
-                    : imageSprSchema2LightPlaceholder
-                }
-                alt="Configuration options for a component."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-              <Image
-                className="spr__sidebar-image"
-                srcSet={`${isDark ? imageSprSchema1Dark : imageSprSchema1Light} 260w, ${isDark ? imageSprSchema1DarkLarge : imageSprSchema1LightLarge
-                  } 520w`}
-                placeholder={
-                  isDark
-                    ? imageSprSchema1DarkPlaceholder
-                    : imageSprSchema1LightPlaceholder
-                }
-                alt="Configuration options for text."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-            </div>
-          </ProjectSectionColumns>
-        </ProjectSection>
+            <EarthSection
+              animations={['0:loop']}
+              camera={[1.14, -1.39, 0.94]}
+              meshes={['Atmosphere', 'EarthFull']}
+            >
+
+            </EarthSection>
+            <EarthSection
+              animations={['0:loop']}
+              camera={[1.17, 0.69, -1.47]}
+              meshes={['Atmosphere', 'EarthFull']}
+              labels={[
+                'Pacific ring of fire',
+                'Ruapehu',
+                'St. Helens',
+                'Krakatoa',
+                'Parícutin',
+                'Kīlauea',
+              ]}
+            >
+
+            </EarthSection>
+            <EarthSection
+              animations={['0:loop']}
+              camera={[1.81, 0.51, 0.43]}
+              meshes={['Atmosphere', 'EarthFull']}
+              labels={[
+                'Pacific ring of fire',
+                'Ruapehu',
+                'St. Helens',
+                'Krakatoa',
+                'Parícutin',
+                'Kīlauea',
+              ]}
+            />
+            <EarthSection
+              animations={['0:loop']}
+              camera={[0.37, 1.02, 1.84]}
+              meshes={['EarthPartial', 'Chunk']}
+              labels={['Mantle', 'Outer core', 'Inner core']}
+            >
+
+            </EarthSection>
+            <EarthSection
+              scrimReverse
+              animations={['0:loop']}
+              camera={[0.37, 1.02, 1.84]}
+              meshes={['Atmosphere', 'EarthFull']}
+            />
+          </Earth>
+        </ThemeProvider>
       </ProjectContainer>
       <Footer />
     </Fragment>
