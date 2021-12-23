@@ -5,6 +5,9 @@
 @custom-media --mediaMobileS (max-width: 400px);
 @custom-media --mediaUseMotion (prefers-reduced-motion: no-preference);
 @custom-media --mediaReduceMotion (prefers-reduced-motion: reduce);
+p {
+  text-align: justify !important;
+}
 
 body {
   font-family: var(--fontStack);
@@ -99,6 +102,31 @@ body .swiper-pagination-bullet {
   align-items: center;
   width: 80%;
   margin: auto;
+}
+.noninverse {
+  padding: 10px 40px 40px 40px;
+  box-sizing: border-box;
+  border: 3px solid white;
+}
+.d-grid-center {
+  width: 80%;
+  margin: auto;
+}
+.inverse p,
+.inverse h1 {
+  color: black !important;
+}
+.inverse {
+  border: 3px solid white;
+  background-color: white;
+  padding: 10px 40px 40px 40px;
+  box-sizing: border-box;
+}
+.align-baseline {
+  align-items: baseline !important;
+}
+.d-flex-center p {
+  text-align: justify !important;
 }
 .slider-custom-image > div {
   justify-content: center;

@@ -24,13 +24,14 @@ const ProfileText = ({ status, titleId }) => (
       level={3}
       id={titleId}
     >
-      <DecoderText text="Get in touch" start={status !== 'exited'} delay={500} />
+      <DecoderText text="About us" start={status !== 'exited'} delay={500} />
     </Heading>
     <Text
       className={classNames('profile__description', `profile__description--${status}`)}
       size="l"
     >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia quia atque quod sapiente omnis ex sequi quisquam, recusandae id fugit dolores cumque eligendi nihil. Mollitia consequatur facilis nisi. Commodi nisi molestias voluptate recusandae eligendi voluptatibus, ad tempora delectus praesentium tenetur voluptatem sed numquam reprehenderit, consequuntur, repudiandae cupiditate dolor libero minima? Officiis illum natus repellendus beatae sapiente mollitia explicabo ad obcaecati assumenda voluptatem, iusto inventore vel optio, vero ipsam amet maxime.
+      We always care about the business of our customers, we provide the highest quality service and the best solutions for your business. Thanks to the latest technology and automation of development processes, we provide quality and speed of development. Scenobard provides partnerships with our customers to create solutions that work to automate and improve business for their customers. We are working on building a smarter structure of the site, formed to achieve the goals of the client. We always care about the business of our customers, we provide the highest quality service and the best solutions for your business.
+      Thanks to the latest technology and automation of development processes, we provide quality and speed of development.
     </Text>
   </Fragment>
 );
@@ -58,7 +59,7 @@ const Profile = ({ id, visible, sectionRef }) => {
                 href="/contact"
                 icon="send"
               >
-                Send me a message
+                Send us a message
               </Button>
             </div>
             <div className="profile__column">

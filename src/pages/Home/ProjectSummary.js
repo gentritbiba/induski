@@ -80,9 +80,10 @@ const ProjectSummary = ({
           `project-summary__button--${status}`
         )}
       >
-        <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
+        {buttonText ? (<Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
           {buttonText}
-        </Button>
+        </Button>) : ""}
+
       </div>
     </div>
   );
