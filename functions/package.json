@@ -1,6 +1,5 @@
 {
   "name": "functions",
-  "description": "Serverless functions for hamishw.com using AWS lambda",
   "scripts": {
     "deploy": "serverless deploy --stage production",
     "deploy:api": "serverless deploy --function api --stage production",
